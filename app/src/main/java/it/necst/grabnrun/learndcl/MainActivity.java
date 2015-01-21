@@ -134,13 +134,13 @@ public class MainActivity extends ActionBarActivity {
 				
 			} catch (ClassNotFoundException e) {
 				Log.w(TAG_MAIN, "No class was found by mDexClassLoader.");
-				fail("No class was found by mDexClassLoader.\nDoublecheck that you have actually downloaded the APK, retrieved its path correctly and initialized mDexClassLoader properly.");
+				fail("No class was found by mDexClassLoader.\nDouble check that you have actually downloaded the APK, retrieved its path correctly and initialized mDexClassLoader properly.");
 			} catch (InstantiationException e) {
-				Log.w(TAG_MAIN, "Issues while instanciating SuccessDialogFragment.");
-				fail("Issues while instanciating SuccessDialogFragment.\nDoublecheck that you have actually downloaded the APK, retrieved its path correctly and initialized mDexClassLoader properly.");
+				Log.w(TAG_MAIN, "Issues while instantiating SuccessDialogFragment.");
+				fail("Issues while instantiating SuccessDialogFragment.\nDouble check that you have actually downloaded the APK, retrieved its path correctly and initialized mDexClassLoader properly.");
 			} catch (IllegalAccessException e) {
-				Log.w(TAG_MAIN, "Issues while instanciating SuccessDialogFragment.");
-				fail("Issues while instanciating SuccessDialogFragment.\nDoublecheck that you have actually downloaded the APK, retrieved its path correctly and initialized mDexClassLoader properly.");
+				Log.w(TAG_MAIN, "Issues while instantiating SuccessDialogFragment.");
+				fail("Issues while instantiating SuccessDialogFragment.\nDouble check that you have actually downloaded the APK, retrieved its path correctly and initialized mDexClassLoader properly.");
 			}
 		
 		}
