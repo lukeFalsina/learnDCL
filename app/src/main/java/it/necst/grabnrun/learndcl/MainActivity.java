@@ -124,7 +124,7 @@ public class MainActivity extends ActionBarActivity {
 		
 		// Safe check on mSecureDexClassLoader not being null.
 		if (mSecureDexClassLoader == null)
-			fail("Hey, it seems you forgot to initialize mDexClassLoader!\nGo back and revise your code ;)");
+			fail("Hey, it seems you forgot to initialize mSecureDexClassLoader!\nGo back and revise your code ;)");
 		else {
 			
 			try {
