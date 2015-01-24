@@ -20,4 +20,6 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
+    // Do not forget to add Grab'n Run library to your project!
+    // Here is a good spot to do so :)
 }

@@ -3,7 +3,9 @@
     package="it.necst.grabnrun.learndcl"
     android:versionCode="1"
     android:versionName="1.0" >
-    
+
+    <!--    Remember to add missing permissions here :)     -->
+
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
