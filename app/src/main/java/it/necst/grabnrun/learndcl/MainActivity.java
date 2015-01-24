@@ -16,15 +16,15 @@ import android.widget.Toast;
  * Your goal here is to load and use an instance of SuccessDialogFragment, an 
  * extension of the standard Android class DialogFragment.
  * 
- * In order to accomplish this task you will have to perform a couple of steps:
+ * In order to accomplish this task you will have to perform several steps:
  * 1.	Fetch the target APK container which contains SuccessDialogFragment implementation.
  * 		from the provided remote URL.
  * 
- * 2.	Store the target APK container on your device in order to retrieve it 
- * 		later with DexClassLoader.
+ * 2.	Store the target APK container on your device in order to use it later
+ * 		while initializing mDexClassLoader.
  * 
  * 3.	Initialize the variable mDexClassLoader with dexPath parameter including
- * 		the path to the target APK container.
+ * 		the path to the target APK container that you have just downloaded.
  * 
  * 4.	Load dynamically the target class by calling the loadClass method
  * 		[ALREADY IMPLEMENTED FOR YOU]
@@ -94,13 +94,14 @@ public class MainActivity extends ActionBarActivity {
 		 */
 		
 		/* TODO
-		 * 2.	Store the target APK container on your device in order to retrieve it 
-		 * 		later with DexClassLoader.
+		 * 2.	Store the target APK container on your device in use it later
+		 * 		while initializing mDexClassLoader.
 		 */
 		
 		/* TODO
 		 * 3.	Initialize the variable mDexClassLoader with "dexPath" parameter including
-		 *		the path to the location where you have stored the target APK container.
+		 *		the path to the location where you have stored the target APK container
+		 *	    that you have just downloaded.
 		 */
 		
 		// Safe check on mDexClassLoader not being null.
@@ -118,7 +119,7 @@ public class MainActivity extends ActionBarActivity {
 				Class<?> dialogFragmentToLoad = mDexClassLoader.loadClass(FULL_CLASS_NAME);
 				
 				/*
-				 * Notice that in this specific case a simple invokation of the zero constructor can 
+				 * Notice that in this specific case a simple invocation of the zero constructor can
 				 * be performed and that is the reason way a simple call to newInstance() is fine.
 				 * On the other hand when you will need to create objects using a constructor different 
 				 * from the zero, this procedure will be slightly more complex.
