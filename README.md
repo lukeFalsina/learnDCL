@@ -46,6 +46,7 @@ Here is a brief walk through on what you are expected to do:
 	This will be a tremendous help to make GNR library a better and more flexible tool :)
 
 Thanks in advance for your time playing with this tutorial and I hope you enjoyed it!
+
 In case you get stuck or you have questions and/or suggestions, you are more than welcome to contact me by email :)
 
 Happy coding :D
