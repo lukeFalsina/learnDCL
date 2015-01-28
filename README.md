@@ -1,61 +1,113 @@
 # Learn DCL (Dynamic Code Loading)
 
-The goal of this repository is helping *Android* developers get more confident with **remote dynamic code loading**. With this tutorial you will practice how to use standard *DexClassLoader* class by completing a simple skeleton application, which makes use of DCL from a remote source. After this first step, you will also learn how to implement the very same functionality by means of [Grab'n Run](https://github.com/lukeFalsina/Grab-n-Run), a simple and neat Java library to secure DCL. My personal hope is that you will be able to **reuse later on** in your Android applications what you are just going to learn here :)
+The goal of this repository is get you to learn **remote dynamic code loading (DCL)**
+for your Android apps.
+
+You will practice how to use the `DexClassLoader` class by filling in the
+missing parts in a simple skeleton application, in order to downloada code from
+remote location and execute it.
+
+Next, you will learn how to implement the very same functionality in a secure
+way.
+
+In addition to learning how to use DCL, you will be helping our [research
+project](http://www.grabnrun.org) in mitigating the security risks caused by
+incautious uses of DCL.
 
 ## Requirements
 
-Before heading to the walk through, you should double check this brief requirements list:
+Double check that you are set with these tools:
 
-1. **Android Studio + Gradle:** You must have a working version of this *IDE* installed on your machine. In the case that you do not, you can get the latest running version by following instructions reported [here](http://developer.android.com/sdk/index.html).
-2. **Git:** In order to move properly between the different branches that I have set up, you will need this version control system. Grab the latest version of it [here](http://git-scm.com/downloads); in case you are completely new to *Git*, you may prefer to first become confident with it before moving on. On the net you may find several good tutorials for Git, a cool one is [Try Git](https://try.github.io/levels/1/challenges/1) but there are just so many of them..
-3. **Time and patience (to taste):** As it occurs every time that you need to learn something new, also here you may take a while to figure out what you are supposed to do. Anyway don't panic! This won't be a very difficult tutorial :) Of course having any previous experience with Android app development will sensibly help to speed things up..  
+1. **Android Studio + Gradle:** You must have a working version of this *IDE*
+   installed on your machine. In the case that you do not, you can get the
+   latest running version by following instructions reported
+   [here](http://developer.android.com/sdk/index.html).
 
-## Walk through
+2. **Git:** In order to move properly between the different branches that I
+   have set up, you will need this version control system. Grab the latest
+   version of it [here](http://git-scm.com/downloads); in case you are
+   completely new to *Git*, you may prefer to first become confident with it
+   before moving on. On the net you may find several good tutorials for Git, a
+   cool one is [Try Git](https://try.github.io/levels/1/challenges/1) but there
+   are just so many of them..
 
-Here is a *walk through* on what you are expected to do:
+## Phase 1
 
-* Clone this repository onto your local machine.
+Here is a walk through on what you are expected to do:
+
+* Fork this repository from your Github account. Why forking and not cloning?
+  You can clone, if you prefer. However, by forking you’re helping us to keep
+  track of who is participating to our research project, to better understand
+  how developers like you use DCL.
+
+```
+  https://github.com/lukeFalsina/learnDCL
+```
+* Create a first branch called *dcl* and invoke **checkout** on it to change
+  branch. You will use this branch to save your first implementation of the
+  sample app project.
 
 ``` bash
-        $ git clone https://github.com/lukeFalsina/learnDCL.git
+    $ git branch dcl
+    $ git checkout dcl
 ```
-* Create a first branch called *dcl* and invoke **checkout** on it to change branch. You will use this branch to save your first implementation of the sample app project.
+* Open the project contained in the root folder with *Android Studio*.
+* Read **carefully** the class `MainActivity.java` in the `app` module. Part of
+  the code are purposely missing: I expect you to implement them :) Follow
+  the step-by-step instructions in the comments to understand
+  exactly what to do. Please bear in mind that you are expected to write a
+  secure, working application.
+* Perform this simple **"Repack"** test:
+    * Run your working app as it is now and see how it behaves.
+    * Once done, modify the string `APK_CONTAINER_URL` inside
+      the `MainActivity.java` class from its current value to
+
+```
+    https://dl.dropboxusercontent.com/u/28681922/HelperAppRepack.apk
+```
+
+    * Save and run again the application.
+    * Can you spoil any difference between the two executions? What is the
+      final outcome in this second test case compared to the first one?
+* Once done, just commit your changes (`git commit`) and shoot us a message via
+  Github. Alternatively, you can send us a pull request to let us know that you
+  are done. In either case, please tell us the outcome of the *”Repack”* check.
+
+## Phase 2
+
+* Now checkout the `secure` branch and then create a new branch called
+  `securedcl`. This new branch will record your second implementation of the
+  example application. 
 
 ``` bash
-		$ git branch dcl
-		$ git checkout dcl
+    $ git checkout secure
+    $ git branch securedcl
+    $ git checkout securedcl
 ```
-* Open the project contained in this folder in *Android Studio*.
-* Study **carefully** the class *"MainActivity.java"* in the *app* module. Some parts of its code implying remote dynamic code loading are missing and I expect you to implement them :) Follow the step by step instructions in the comments of that Java class to learn exactly what to do. Please bear in mind that you are expected to write an **application** that, it *not only works fine*, but is also **secure**! I mean, as developers, we want our users to get only the best or aren't we? :) 
-* Once that you are done and the application is fully working remember to **COMMIT** your changes (git commit).
+* If you turn back your attention to the *Android Studio* editor, you will
+  notice that the code that you have just implemnted vanished and it was
+  substituted by a different implementation of the `MainActivity.java` class.
+* Now go through the comments to understand exactly what you are supposed to
+  do. Basically, you will now implement the same application you did
+  before but this time you will learn how to use **Grab'n Run (GNR)** APIs
+  instead of the native `DexClassLoader` APIs.
+* Once your app works correctly again, perform the same "Repack" test explained
+  before.
 
-	Perform also this simple **"Repack"** test:
+    * Can you notice any difference between this execution of the test and the
+      one that you did before? If yes, awesome ;)
 
-	* Run your working app as it is now and see how it behaves.
-	* Once that you are done, modify the string **APK_CONTAINER_URL** inside of the *"MainActivity.java"* class from its current value to "https://dl.dropboxusercontent.com/u/28681922/HelperAppRepack.apk"
-	* Save and run again the application.
-	* Can you spoil any difference between the two executions? What is the final outcome in this second test case compared to the first one?
+* Once more, remember to commit and send us a pull request, or a Github
+  notification.
 
-* Now checkout the *secure* branch and then create a new branch called *"securedcl"*. This new branch will record your second implementation of the example application. 
+## Phase 3
 
-``` bash
-        $ git checkout secure
-        $ git branch securedcl
-		$ git checkout securedcl
-```
-* If you turn back your attention to the *Android Studio* editor, you will notice that the code that you have just implemnted vanished and it was substituted by a different implementation of the class *"MainActivity.java"*. This is absolutely **NORMAL** and it happens since you have switched your repository to a different branch.
-* Once again inspect **carefully** the comments in the class *"MainActivity.java"* to learn exactly what you are supposed to do. Basically you will now implement the same kind of application you did before but this time you will learn how to use **Grab'n Run (GNR)** APIs instead of standard *DexClassLoader*.
-* Once that you are done with the steps depicted in the comments and your app works correctly again, perform the same "Repack" test explained before.
+In addition to your code, we would like to received your build files.
 
-	* Can you notice any difference between this execution of the test and the one that you did before? If yes, awesome ;)
+* Zip your "LearnDCL" folder and send it to lfalsina@gmail.com
+* Complete this [form](http://goo.gl/forms/k500h7cYiv) on DCL and Grab'n Run.
 
-* Once more remember to **COMMIT** your current code implementation :)
-* If you want to help my research, you have to perform two further steps that would be greatly appreciated:
-
-	* Zip your "LearnDCL" folder and send it to lfalsina@gmail.com
-	* Complete this [form](http://goo.gl/forms/k500h7cYiv) on DCL and Grab'n Run.
-
-	This will be a tremendous help to make GNR library a better and more flexible tool :)
+This will be a tremendous help to make GNR library a better and more flexible tool :)
 
 Thanks in advance for your time playing with this tutorial and I hope you enjoyed it!
 
