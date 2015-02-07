@@ -38,16 +38,19 @@ Here is a walk through on what you are expected to do:
 * Fork this repository from your Github account. Why forking and not cloning?
   You can clone, if you prefer. However, by forking you’re helping us to keep
   track of who is participating to our research project, to better understand
-  how developers like you use DCL.
+  how developers like you use DCL. If you decide to fork, press the `Fork` 
+  button located at the top-right corner of this page; otherwise, if you 
+  decide to clone, type these commands in a terminal.
 
-```
-  https://github.com/lukeFalsina/learnDCL
+``` bash
+    $ git clone https://github.com/lukeFalsina/learnDCL.git
 ```
 * Create a first branch called *dcl* and invoke **checkout** on it to change
   branch. You will use this branch to save your first implementation of the
   sample app project.
 
 ``` bash
+    $ cd <path_to_learnDCL_folder_on_your_machine>/learnDCL
     $ git branch dcl
     $ git checkout dcl
 ```
@@ -104,8 +107,8 @@ Here is a walk through on what you are expected to do:
 
 In addition to your code, we would like to received your build files.
 
-* Zip your "LearnDCL" folder and send it to lfalsina@gmail.com
-* Complete this [form](http://goo.gl/forms/k500h7cYiv) on DCL and Grab'n Run.
+* Zip your "learnDCL" folder and send it to lfalsina@gmail.com
+* Complete this [form](http://goo.gl/forms/csLE0icP2S) on DCL and Grab'n Run.
 
 This will be a tremendous help to make GNR library a better and more flexible tool :)
 
