@@ -19,9 +19,9 @@ evaluating several aspects, such as efficiency, code readability, security, and
 maintainability of the code.
 
 For this experiment, we will give you a *toy application* to play with, and we
-will ask you to implement several additional functionality (again, all the
+will ask you to implement several additional functionalities (again, all the
 details later). Note: Even if the application is not a real, full-fledge
-Android app, we ask you to treat such app as it were your most successful app
+Android app, we ask you to treat such app as if it would be your most successful app
 on the Google official app store, with millions of users!
 
 Again, *you will play with a toy example, but, for the purpose of this
@@ -53,19 +53,15 @@ Double check that you are set with these tools:
 
 You will practice how to use the `DexClassLoader` class by filling in the
 missing parts in a simple skeleton application, in order to download code from
-remote location and execute it.
+a remote location and execute it.
 
 Note: do **not** read/continue to Phase 2 until you are done with this one! No
 spoilers!
 
 Here is a walk through on what you are expected to do:
 
-* Fork this repository from your Github account. Why forking and not cloning?
-  You can clone, if you prefer. However, by forking you’re helping us to keep
-  track of who is participating to our research project, to better understand
-  how developers like you use DCL. If you decide to fork, press the `Fork` 
-  button located at the top-right corner of this page; otherwise, if you 
-  decide to clone, type these commands in a terminal.
+* Clone this repository on your local machine by typing the following command
+  in a terminal.
 
 ``` bash
     $ git clone https://github.com/lukeFalsina/learnDCL.git
@@ -75,14 +71,14 @@ Here is a walk through on what you are expected to do:
   sample app project.
 
 ``` bash
-    $ cd <path_to_learnDCL_folder_on_your_machine>/learnDCL
+    $ cd learnDCL
     $ git branch dcl
     $ git checkout dcl
 ```
 * Open the project contained in the root folder with *Android Studio*.
-* Read **carefully** the class `MainActivity.java` in the `app` module. Part of
+* Read **carefully** the class `MainActivity.java` in the `app` module. Parts of
   the code are purposely missing: I expect you to implement them :) Follow
-  the step-by-step instructions in the comments to understand
+  the step-by-step instructions in the comments of the Java class to understand
   exactly what to do. Please bear in mind that you are expected to write a
   secure, working application.
 * Perform this simple **"Repack"** test:
@@ -97,9 +93,9 @@ Here is a walk through on what you are expected to do:
     * Save and run again the application.
     * Can you spoil any difference between the two executions? What is the
       final outcome in this second test case compared to the first one?
-* Once done, just commit your changes (`git commit`) and shoot us a message via
-  Github. Alternatively, you can send us a pull request to let us know that you
-  are done. In either case, please tell us the outcome of the *”Repack”* check.
+* Once done, just commit your changes (`git commit`) and remember (or even 
+  write down) the outcome of the previous "Repack" test since we will ask you
+  about it later on.
 
 ## Phase 2
 
@@ -133,21 +129,20 @@ Here are the details on how to continue!
     * Can you notice any difference between this execution of the test and the
       one that you did before? If yes, awesome ;)
 
-* Once more, remember to commit and send us a pull request, or a Github
-  notification.
+* Once more, remember to commit and keep in mind the outcome of the second run
+  of the "Repack" test.
 
 ## Phase 3
 
-In addition to your code, we would like to received your build files.
+In addition to your code, we would like to receive your build files. So:
 
 * Zip your "learnDCL" folder and send it to lfalsina@gmail.com
-* Complete this [form](http://goo.gl/forms/csLE0icP2S) on DCL and Grab'n Run.
-
-This will be a tremendous help to make GNR library a better and more flexible tool :)
+* Complete this [form](http://goo.gl/forms/csLE0icP2S) on your experiment with DCL and Grab'n Run.
 
 Thanks in advance for your time playing with this tutorial and I hope you enjoyed it!
 
-In case you get stuck or you have questions and/or suggestions, you are more than welcome to contact me by email :)
+In case you get stuck or you have questions and/or suggestions, you are more than 
+welcome to contact me by email :)
 
 Happy coding :D
 
