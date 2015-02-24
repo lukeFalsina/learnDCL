@@ -93,9 +93,9 @@ Here is a walk through on what you are expected to do:
     * Save and run again the application.
     * Can you spoil any difference between the two executions? What is the
       final outcome in this second test case compared to the first one?
-* Once done, just commit your changes (`git commit`) and remember (or even 
-  write down) the outcome of the previous "Repack" test since we will ask you
-  about it later on.
+* Once done, just commit your changes (`git commit`) on your LOCAL machine 
+  (so, no `git push`) and remember (or even write down) the outcome of the 
+  previous "Repack" test since we will ask you about it later on.
 
 ## Phase 2
 
@@ -134,9 +134,11 @@ Here are the details on how to continue!
 
 ## Phase 3
 
-In addition to your code, we would like to receive your build files. So:
+In addition to your code, we would like to be able to re-construct your build files. So:
 
-* Zip your "learnDCL" folder and send it to lfalsina@gmail.com
+* Zip your "learnDCL" folder and send it to lfalsina@gmail.com (To speed up the process, 
+  before compressing the folder, you may clean the builds from your project. To achieve this, 
+  simply type and execute in the same terminal you used before `./gradlew clean`).
 * Complete this [form](http://goo.gl/forms/csLE0icP2S) on your experiment with DCL and Grab'n Run.
 
 Thanks in advance for your time playing with this tutorial and I hope you enjoyed it!
