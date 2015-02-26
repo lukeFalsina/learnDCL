@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Learn DCL</string>
-    <string name="explanation">This stub of an Android application helps you practising on how to use dynamic code loading with standard DexClassLoader API.</string>
+    <string name="explanation">This stub of an Android application helps you practising on how to use dynamic code loading with Grab\'n Run API.</string>
     <string name="action_settings">Settings</string>
     <string name="checkbutton">Check your code!</string>
 
