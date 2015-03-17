@@ -108,19 +108,20 @@ public class MainActivity extends ActionBarActivity {
 	public void onBtnClick(View view) {
 		
 		/* TODO
-         * 3.   Instantiate and initialize a SecureLoaderFactory object.
+         	 * 3.   Instantiate and initialize a SecureLoaderFactory object.
 		 */
 		
 		/* TODO
 		 * 4.	Instantiate, initialize and populate an HashMap which links the PACKAGE NAME of the class to load
-		 *      (see FULL_CLASS_NAME) with the certificate used for the verification (see CERTIFICATE_URL).
-		 * 		Remember to handle the MalformedURLException in your implementation!
+		 *      (you can extract it starting from the FULL_CLASS_NAME variable, still remember that
+ 		 *      FULL_CLASS_NAME is NOT the PACKAGE NAME!) with the certificate used for the verification (see CERTIFICATE_URL).
+		 * 	Remember to handle the MalformedURLException in your implementation!
 		 */
 		
 		/* TODO
 		 * 5.	Initialize the variable mSecureDexClassLoader by means of the SecureLoaderFactory object.
 		 *      This time dexPath can be directly the APK_CONTAINER_URL string since Grab'n Run will handle
-		 *		the download and store process on the container for you :)
+		 *	the download and store process on the container for you :)
 		 */
 		
 		// Safe check on mSecureDexClassLoader not being null.
